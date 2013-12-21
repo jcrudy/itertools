@@ -1,5 +1,5 @@
 import org.scalatest._
-import itertools.{Chain}
+import itertools.Chain
 
 class ChainTest extends FlatSpec {
   "A Chain" should "be instantiated from Iterables" in {
@@ -19,4 +19,6 @@ class ChainTest extends FlatSpec {
     val chain = Chain(Array(1,2,3), Array(4,5,6), List(7,8,9))
     assert(chain.toArray === Array(1,2,3,4,5,6,7,8,9))
   }
+
+
 }

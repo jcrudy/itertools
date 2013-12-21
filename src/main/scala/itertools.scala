@@ -1,9 +1,5 @@
 package itertools
 
-import generator.Generator
-
-// def chain() = generator[Any] {}
-
 class Chain[T](val iterables: Iterable[T]*) extends Iterator[T] {
 	val iteratorIterator = (for (iterable <- iterables) yield iterable.iterator).iterator
 	var currentIterator: Iterator[T] = _
